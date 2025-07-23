@@ -1,2 +1,2 @@
-pyseagull
+numpy
 Pillow
