@@ -28,12 +28,11 @@ live_cell_color = tuple(x for x in palette[1])
 
 img = Image.new("RGB", size=canvas_size, color=dead_cell_color)
 
-print(len(game.board), len(game.board[0]))
-
 for x in range(width-1):
     for y in range(height-1):
         if int(game.board[x][y]):
-            print("alive")
             img.putpixel((x,y), live_cell_color)
+
+img = img.resize(tuple(x for x in output_size), resample=Image.NEAREST)
 
 img.save("wallpaper.png")
