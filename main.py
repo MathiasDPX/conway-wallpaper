@@ -1,6 +1,12 @@
+import sys
 import json
 from PIL import Image
 from engine import GameOfLife
+
+try:
+    steps = int(sys.argv[1])
+except:
+    steps = 1
 
 # Setup
 try:
@@ -18,7 +24,10 @@ width, height = canvas_size
 # Process game
 game = GameOfLife()
 game.load("board.txt", canvas_size=canvas_size)
-game.step()
+
+for i in range(steps):
+    game.step()
+
 game.save("board.txt")
 
 # Save image
