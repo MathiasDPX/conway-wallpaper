@@ -1,0 +1,11 @@
+{
+    "_comment": {
+        "output_size": "Resolution of the wallpaper",
+        "scale": "Scale is the 'real' image resolution, the canva while be size/ratio but the final image will be the size of 'output_size'",
+        "palette": "The first color is for dead cell and the second for live cell"
+    },
+
+    "output_size": [2560, 1440],
+    "scale": 10,
+    "palette": [[30,30,30], [0,122,204]]
+}
