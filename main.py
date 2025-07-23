@@ -28,9 +28,9 @@ live_cell_color = tuple(x for x in palette[1])
 
 img = Image.new("RGB", size=canvas_size, color=dead_cell_color)
 
-for x in range(width-1):
-    for y in range(height-1):
-        if int(game.board[x][y]):
+for y in range(height-1):
+    for x in range(width-1):
+        if int(game.board[y][x]):
             img.putpixel((x,y), live_cell_color)
 
 img = img.resize(tuple(x for x in output_size), resample=Image.NEAREST)
